@@ -30,6 +30,13 @@ title: Notes
             <div class="link-info">
                 <div class="link-title">{{ post.title }}</div>
                 <div class="link-desc">{{ post.date | date: "%Y-%m-%d" }} · {{ post.excerpt | strip_html | truncate: 50 }}</div>
+                {% if post.tags %}
+                <div class="post-tags">
+                    {% for tag in post.tags %}
+                    <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
             </div>
             <span class="link-arrow">→</span>
         </a>
