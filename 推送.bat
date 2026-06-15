@@ -5,11 +5,6 @@ echo.
 echo ============================================
 echo   Blog Push Tool
 echo ============================================
-echo.
-echo   Tags: wangluo=网络技术  wuxian=无线通信
-echo         leidebao=里德堡原子  AI=AI大模型
-echo.
-
 git status --short
 if %errorlevel% neq 0 (
     echo [FAIL] git status error
