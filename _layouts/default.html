@@ -1,11 +1,9 @@
----
----
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whyuki · Personal Site</title>
+    <title>{% if page.title %}{{ page.title }} | {% endif %}Wu-uY</title>
     <style>
         /* ===== Reset & Base ===== */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -92,51 +90,6 @@
             padding: 100px 0 40px;
             text-align: center;
         }
-        .avatar {
-            width: 88px; height: 88px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent), #519aff);
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 28px;
-            font-size: 36px;
-            color: #fff;
-            font-weight: 700;
-            box-shadow: 0 0 60px var(--accent-glow);
-            animation: avatar-pulse 4s ease-in-out infinite;
-            user-select: none;
-        }
-        @keyframes avatar-pulse {
-            0%,100% { box-shadow: 0 0 40px var(--accent-glow); }
-            50% { box-shadow: 0 0 80px rgba(57,186,230,0.5); }
-        }
-        header h1 {
-            font-size: 2.6rem;
-            font-weight: 700;
-            color: var(--text-bright);
-            letter-spacing: -0.02em;
-        }
-        header h1 .dot {
-            color: var(--accent);
-        }
-        header .tagline {
-            margin-top: 12px;
-            font-size: 1.05rem;
-            color: #64748b;
-            font-family: var(--font-mono);
-            font-size: 0.9rem;
-        }
-        header .tagline .cursor {
-            display: inline-block;
-            width: 10px; height: 18px;
-            background: var(--accent);
-            vertical-align: text-bottom;
-            margin-left: 2px;
-            animation: blink 1s step-end infinite;
-        }
-        @keyframes blink {
-            0%,100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
 
         /* ===== Divider ===== */
         .divider {
@@ -159,7 +112,7 @@
             font-weight: 600;
         }
 
-        /* ===== About Card ===== */
+        /* ===== Card ===== */
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -241,27 +194,6 @@
             transform: translateX(3px);
         }
 
-        /* ===== Status Dots ===== */
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.82rem;
-            color: #5a6e7e;
-            font-family: var(--font-mono);
-        }
-        .status-dot {
-            width: 7px; height: 7px;
-            border-radius: 50%;
-            background: #22c55e;
-            box-shadow: 0 0 8px #22c55e88;
-            animation: status-pulse 2s ease-in-out infinite;
-        }
-        @keyframes status-pulse {
-            0%,100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
-
         /* ===== Footer ===== */
         footer {
             text-align: center;
@@ -272,12 +204,129 @@
         }
         footer span { color: var(--accent); }
 
+        /* ===== Back Link ===== */
+        .back-link {
+            display: inline-block;
+            color: #4a6272;
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            transition: color 0.3s;
+            margin-bottom: 8px;
+        }
+        .back-link:hover { color: var(--accent); }
+
+        /* ===== Post Content ===== */
+        .post-content {
+            padding: 20px 0 40px;
+        }
+        .post-content h2 {
+            font-size: 1.25rem;
+            color: var(--text-bright);
+            margin: 36px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            text-transform: none;
+            letter-spacing: normal;
+        }
+        .post-content h3 {
+            font-size: 1.06rem;
+            color: var(--text-bright);
+            margin: 28px 0 12px;
+            text-transform: none;
+            letter-spacing: normal;
+        }
+        .post-content p {
+            margin-bottom: 16px;
+            line-height: 1.85;
+        }
+        .post-content code {
+            background: #1a2330;
+            padding: 2px 7px;
+            border-radius: 5px;
+            font-family: var(--font-mono);
+            font-size: 0.85em;
+            color: var(--accent);
+        }
+        .post-content pre {
+            background: #0d1117;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 18px 22px;
+            overflow-x: auto;
+            margin: 18px 0;
+        }
+        .post-content pre code {
+            background: none;
+            padding: 0;
+            color: var(--text);
+            font-size: 0.88rem;
+        }
+        .post-content blockquote {
+            border-left: 3px solid var(--accent);
+            padding: 4px 0 4px 18px;
+            color: #8a9fb0;
+            margin: 18px 0;
+        }
+        .post-content ul, .post-content ol {
+            padding-left: 24px;
+            margin: 14px 0;
+        }
+        .post-content li {
+            margin-bottom: 8px;
+        }
+        .post-content a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .post-content a:hover {
+            border-bottom-color: var(--accent);
+        }
+        .post-content img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .post-content strong {
+            color: var(--text-bright);
+            font-weight: 600;
+        }
+
+        /* ===== Blog Header (compact) ===== */
+        .blog-header {
+            padding: 60px 0 28px;
+            text-align: center;
+        }
+        .blog-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            letter-spacing: -0.02em;
+        }
+        .blog-header .tagline {
+            margin-top: 8px;
+            color: #64748b;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+
+        /* ===== Empty State ===== */
+        .empty-state {
+            text-align: center;
+            padding: 40px 0;
+            color: #4a6272;
+            font-size: 0.9rem;
+        }
+
         /* ===== Responsive ===== */
         @media (max-width: 640px) {
             header { padding: 60px 0 28px; }
-            header h1 { font-size: 2rem; }
+            .blog-header { padding: 40px 0 20px; }
+            .blog-header h1 { font-size: 1.6rem; }
             .card { padding: 20px 22px; }
             .link-item { padding: 14px 16px; }
+            .post-content pre { padding: 14px 16px; }
         }
     </style>
 </head>
@@ -290,71 +339,10 @@
 
     <div class="container">
 
-        <!-- Header -->
-        <header>
-            <div class="avatar">W</div>
-            <h1>Wu-uY<span class="dot">.</span></h1>
-            <p class="tagline">
-                <span>> Hello World</span><span class="cursor"></span>
-            </p>
-        </header>
+        {{ content }}
 
-        <div class="divider"></div>
-
-        <!-- About -->
-        <section>
-            <h2>✦ About</h2>
-            <div class="card">
-                <p>你好，我是 兀虞👋</p>
-                <p style="margin-top:10px;">热爱思考和进步，欢迎来到我的个人空间。在这里分享我所见、所学、所想。</p>
-                <div style="margin-top:16px;">
-                    <span class="status"><span class="status-dot"></span> 在线</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Links -->
-        <section>
-            <h2>✦ Links</h2>
-            <div class="links">
-                <a href="/blog/" class="link-item">
-                    <div class="link-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bae6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                    </div>
-                    <div class="link-info">
-                        <div class="link-title">Notes</div>
-                        <div class="link-desc">笔记与文章</div>
-                    </div>
-                    <span class="link-arrow">→</span>
-                </a>
-
-                <a href="https://space.bilibili.com/29609478" target="_blank" rel="noopener" class="link-item">
-                    <div class="link-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bae6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    </div>
-                    <div class="link-info">
-                        <div class="link-title">Bilibili</div>
-                        <div class="link-desc">bilibili.com</div>
-                    </div>
-                    <span class="link-arrow">→</span>
-                </a>
-
-                <a href="https://github.com/tsinghong1984" target="_blank" rel="noopener" class="link-item">
-                    <div class="link-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bae6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-                    </div>
-                    <div class="link-info">
-                        <div class="link-title">GitHub</div>
-                        <div class="link-desc">github.com/tsinghong1984</div>
-                    </div>
-                    <span class="link-arrow">→</span>
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer -->
         <footer>
-            Built with <span>♥</span> · &copy; 2026 Wu-uY
+            Built with <span>♥</span> · &copy; {{ site.time | date: '%Y' }} Wu-uY
         </footer>
 
     </div>

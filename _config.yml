@@ -1,0 +1,7 @@
+title: Wu-uY · Personal Site
+description: 兀虞的个人空间 - 分享所见、所学、所想
+baseurl: ""
+url: "https://tsinghong1984.github.io"
+markdown: kramdown
+permalink: /notes/:year/:month/:day/:title/
+excerpt_separator: "<!--more-->"

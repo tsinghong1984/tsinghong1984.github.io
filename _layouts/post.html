@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<header>
+    <a href="/blog/" class="back-link">← 返回笔记</a>
+    <div class="blog-header">
+        <h1>{{ page.title }}</h1>
+        <p class="tagline">{{ page.date | date: "%Y-%m-%d" }}</p>
+    </div>
+</header>
+
+<div class="divider"></div>
+
+<article class="post-content">
+    {{ content }}
+</article>
