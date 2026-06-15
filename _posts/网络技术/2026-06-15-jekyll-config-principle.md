@@ -2,7 +2,6 @@
 layout: post
 title: "深入理解 Jekyll + GitHub Pages 博客的配置原理"
 date: 2026-06-15
-tags: [网络技术]
 ---
 
 ## 前言

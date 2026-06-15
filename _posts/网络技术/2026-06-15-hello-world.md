@@ -2,7 +2,6 @@
 layout: post
 title: "Hello World · 第一篇笔记"
 date: 2026-06-15
-tags: [网络技术]
 ---
 
 这是我的第一篇笔记，用来测试 Jekyll 博客系统是否正常工作。

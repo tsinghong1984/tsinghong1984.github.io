@@ -2,7 +2,6 @@
 layout: post
 title: "Git 推送到 GitHub 失败？SSH / HTTPS / 代理原理全解析"
 date: 2026-06-15
-tags: [网络技术]
 ---
 
 ## 问题现象
