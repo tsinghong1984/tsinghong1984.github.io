@@ -1,7 +1,350 @@
-<p>Hello 大家好</p>
-<p>我是Whyuki，这是我的个人网站。 </p>
-<p>很高兴你来到这里</p>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whyuki · Personal Site</title>
+    <style>
+        /* ===== Reset & Base ===== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-<ul>
-  <li> <a href="https://space.bilibili.com/29609478">B站首页</a> </li>
-</ul>
+        :root {
+            --bg: #0a0e14;
+            --bg-card: #131820;
+            --text: #b3c7d6;
+            --text-bright: #e6edf3;
+            --accent: #39bae6;
+            --accent-glow: #39bae666;
+            --border: #1e2a36;
+            --font-mono: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', 'SF Mono', 'Consolas', monospace;
+            --font-sans: 'Inter', 'SF Pro Display', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== Animated Grid Background ===== */
+        .bg-grid {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+        .bg-grid::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(57,186,230,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(57,186,230,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse 60% 60% at 50% 30%, black 30%, transparent 70%);
+        }
+
+        /* ===== Floating Orbs ===== */
+        .orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .orb-1 {
+            width: 500px; height: 500px;
+            background: rgba(57,186,230,0.06);
+            top: -15%; left: -10%;
+            animation: float 20s ease-in-out infinite;
+        }
+        .orb-2 {
+            width: 400px; height: 400px;
+            background: rgba(81,154,255,0.05);
+            bottom: -10%; right: -5%;
+            animation: float 24s ease-in-out infinite reverse;
+        }
+        @keyframes float {
+            0%,100% { transform: translate(0,0) scale(1); }
+            33% { transform: translate(40px,-30px) scale(1.08); }
+            66% { transform: translate(-30px,20px) scale(0.94); }
+        }
+
+        /* ===== Layout ===== */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* ===== Header ===== */
+        header {
+            padding: 100px 0 40px;
+            text-align: center;
+        }
+        .avatar {
+            width: 88px; height: 88px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #519aff);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 28px;
+            font-size: 36px;
+            color: #fff;
+            font-weight: 700;
+            box-shadow: 0 0 60px var(--accent-glow);
+            animation: avatar-pulse 4s ease-in-out infinite;
+            user-select: none;
+        }
+        @keyframes avatar-pulse {
+            0%,100% { box-shadow: 0 0 40px var(--accent-glow); }
+            50% { box-shadow: 0 0 80px rgba(57,186,230,0.5); }
+        }
+        header h1 {
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            letter-spacing: -0.02em;
+        }
+        header h1 .dot {
+            color: var(--accent);
+        }
+        header .tagline {
+            margin-top: 12px;
+            font-size: 1.05rem;
+            color: #64748b;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+        }
+        header .tagline .cursor {
+            display: inline-block;
+            width: 10px; height: 18px;
+            background: var(--accent);
+            vertical-align: text-bottom;
+            margin-left: 2px;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            0%,100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* ===== Divider ===== */
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+            margin: 0 auto;
+            max-width: 400px;
+        }
+
+        /* ===== Sections ===== */
+        section {
+            padding: 40px 0;
+        }
+        section h2 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #4a6272;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* ===== About Card ===== */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 30px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            border-color: #2a3f50;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(57,186,230,0.25), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .card:hover::before { opacity: 1; }
+        .card p {
+            font-size: 0.95rem;
+            color: #8a9fb0;
+        }
+
+        /* ===== Links ===== */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .link-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 16px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s;
+            position: relative;
+        }
+        .link-item:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 24px rgba(57,186,230,0.08);
+            transform: translateX(4px);
+            color: var(--text-bright);
+        }
+        .link-icon {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            background: #1a2330;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        .link-info .link-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .link-info .link-desc {
+            font-size: 0.78rem;
+            color: #5a6e7e;
+            margin-top: 2px;
+        }
+        .link-arrow {
+            margin-left: auto;
+            color: #3b5263;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        .link-item:hover .link-arrow {
+            color: var(--accent);
+            transform: translateX(3px);
+        }
+
+        /* ===== Status Dots ===== */
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            color: #5a6e7e;
+            font-family: var(--font-mono);
+        }
+        .status-dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 8px #22c55e88;
+            animation: status-pulse 2s ease-in-out infinite;
+        }
+        @keyframes status-pulse {
+            0%,100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            text-align: center;
+            padding: 50px 0;
+            color: #3b4f5e;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+        }
+        footer span { color: var(--accent); }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 640px) {
+            header { padding: 60px 0 28px; }
+            header h1 { font-size: 2rem; }
+            .card { padding: 20px 22px; }
+            .link-item { padding: 14px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Effects -->
+    <div class="bg-grid"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div class="avatar">W</div>
+            <h1>Whyuki<span class="dot">.</span></h1>
+            <p class="tagline">
+                <span>> Hello World</span><span class="cursor"></span>
+            </p>
+        </header>
+
+        <div class="divider"></div>
+
+        <!-- About -->
+        <section>
+            <h2>✦ About</h2>
+            <div class="card">
+                <p>你好，我是 Whyuki 👋</p>
+                <p style="margin-top:10px;">热爱技术与创作，欢迎来到我的个人空间。在这里分享我所见、所学、所想。</p>
+                <div style="margin-top:16px;">
+                    <span class="status"><span class="status-dot"></span> 在线</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Links -->
+        <section>
+            <h2>✦ Links</h2>
+            <div class="links">
+                <a href="https://space.bilibili.com/29609478" target="_blank" rel="noopener" class="link-item">
+                    <div class="link-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bae6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <div class="link-info">
+                        <div class="link-title">Bilibili</div>
+                        <div class="link-desc">bilibili.com</div>
+                    </div>
+                    <span class="link-arrow">→</span>
+                </a>
+
+                <a href="https://github.com/tsinghong1984" target="_blank" rel="noopener" class="link-item">
+                    <div class="link-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bae6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    </div>
+                    <div class="link-info">
+                        <div class="link-title">GitHub</div>
+                        <div class="link-desc">github.com/tsinghong1984</div>
+                    </div>
+                    <span class="link-arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            Built with <span>♥</span> · &copy; 2026 Whyuki
+        </footer>
+
+    </div>
+
+</body>
+</html>
