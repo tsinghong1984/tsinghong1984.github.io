@@ -1,2 +1,2 @@
 @echo off
-powershell -ExecutionPolicy Bypass -File "%~dp0推送.ps1"
+powershell -ExecutionPolicy Bypass -File "%~dp0push.ps1"
