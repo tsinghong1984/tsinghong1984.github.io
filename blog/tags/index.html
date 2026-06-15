@@ -1,0 +1,62 @@
+---
+layout: default
+title: 标签
+---
+<header>
+    <a href="/blog/" class="back-link">← 返回笔记</a>
+    <div class="blog-header">
+        <h1>✦ Tags</h1>
+        <p class="tagline">按标签筛选文章</p>
+    </div>
+</header>
+
+<div class="divider"></div>
+
+{% assign all_tags = "" | split: "" %}
+{% for post in site.posts %}
+  {% for tag in post.tags %}
+    {% unless all_tags contains tag %}
+      {% assign all_tags = all_tags | push: tag %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+{% assign all_tags = all_tags | sort %}
+
+<!-- 标签快速导航 -->
+<section>
+    <div class="tag-cloud">
+        {% for tag in all_tags %}
+        <a href="#tag-{{ tag | slugify: 'pretty' }}" class="tag-badge">{{ tag }}</a>
+        {% endfor %}
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 按标签列出文章 -->
+{% for tag in all_tags %}
+<section>
+    <h2 id="tag-{{ tag | slugify: 'pretty' }}">✦ {{ tag }}</h2>
+    <div class="links">
+        {% for post in site.posts %}
+        {% if post.tags contains tag %}
+        <a href="{{ post.url }}" class="link-item">
+            <div class="link-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#39bae6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+            </div>
+            <div class="link-info">
+                <div class="link-title">{{ post.title }}</div>
+                <div class="link-desc">{{ post.date | date: "%Y-%m-%d" }}</div>
+            </div>
+            <span class="link-arrow">→</span>
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{% endfor %}

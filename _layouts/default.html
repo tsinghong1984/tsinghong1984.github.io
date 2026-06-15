@@ -194,6 +194,32 @@
             transform: translateX(3px);
         }
 
+        /* ===== Tag Cloud ===== */
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .tag-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            font-size: 0.82rem;
+            font-family: var(--font-mono);
+            color: var(--accent);
+            background: rgba(57,186,230,0.06);
+            border: 1px solid rgba(57,186,230,0.25);
+            border-radius: 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .tag-badge:hover {
+            background: rgba(57,186,230,0.15);
+            border-color: var(--accent);
+            box-shadow: 0 0 16px rgba(57,186,230,0.12);
+        }
+
         /* ===== Tag Badges ===== */
         .post-tags {
             display: flex;
