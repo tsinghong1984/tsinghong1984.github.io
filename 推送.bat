@@ -12,8 +12,8 @@ if %errorlevel% neq 0 (
     exit /b 1
 )
 
-git diff-index --quiet HEAD --
-if %errorlevel% equ 0 (
+git status --porcelain | findstr . >nul
+if %errorlevel% neq 0 (
     echo [SKIP] No changes to push
     pause
     exit /b 0
