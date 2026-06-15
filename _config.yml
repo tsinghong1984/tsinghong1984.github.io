@@ -6,6 +6,10 @@ markdown: kramdown
 permalink: /notes/:year/:month/:day/:title/
 excerpt_separator: "<!--more-->"
 
+# kramdown 数学公式渲染，配合 MathJax 3
+kramdown:
+  math_engine: mathjax
+
 # 文件夹 → 标签自动映射
 # 文章放在哪个文件夹就自动获得对应标签，无需在 front matter 手写 tags
 defaults:
