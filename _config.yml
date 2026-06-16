@@ -26,6 +26,10 @@ defaults:
     values:
       tags: [里德堡原子]
   - scope:
+      path: "_posts/里德堡原子/RAOFDM"
+    values:
+      tags: [里德堡原子, RAOFDM]
+  - scope:
       path: "_posts/AI大模型"
     values:
       tags: [AI大模型]
