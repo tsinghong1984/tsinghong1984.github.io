@@ -9,27 +9,3 @@ excerpt_separator: "<!--more-->"
 # kramdown 数学公式渲染，配合 MathJax 3
 kramdown:
   math_engine: mathjax
-
-# 文件夹 → 标签自动映射
-# 文章放在哪个文件夹就自动获得对应标签，无需在 front matter 手写 tags
-defaults:
-  - scope:
-      path: "_posts/网络技术"
-    values:
-      tags: [网络技术]
-  - scope:
-      path: "_posts/无线通信"
-    values:
-      tags: [无线通信]
-  - scope:
-      path: "_posts/里德堡原子"
-    values:
-      tags: [里德堡原子]
-  - scope:
-      path: "_posts/里德堡原子/RAOFDM"
-    values:
-      tags: [里德堡原子, RAOFDM]
-  - scope:
-      path: "_posts/AI大模型"
-    values:
-      tags: [AI大模型]
