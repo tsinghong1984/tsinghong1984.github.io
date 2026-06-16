@@ -1,0 +1,136 @@
+﻿2026-06-16T17:21:09.8240895Z ##[group]Run actions/jekyll-build-pages@v1
+2026-06-16T17:21:09.8241226Z with:
+2026-06-16T17:21:09.8241440Z   source: ./
+2026-06-16T17:21:09.8241648Z   destination: ./_site
+2026-06-16T17:21:09.8241882Z   future: false
+2026-06-16T17:21:09.8242160Z   build_revision: b900a62575653d17fbf66d38a2ed0b66b3f2004a
+2026-06-16T17:21:09.8242482Z   verbose: true
+2026-06-16T17:21:09.8245284Z   token: ***
+2026-06-16T17:21:09.8245488Z env:
+2026-06-16T17:21:09.8245683Z   GITHUB_PAGES: true
+2026-06-16T17:21:09.8245907Z ##[endgroup]
+2026-06-16T17:21:09.8339386Z ##[command]/usr/bin/docker run --name ghcrioactionsjekyllbuildpagesv1013_671d80 --label 309d09 --workdir /github/workspace --rm -e "GITHUB_PAGES" -e "INPUT_SOURCE" -e "INPUT_DESTINATION" -e "INPUT_FUTURE" -e "INPUT_BUILD_REVISION" -e "INPUT_VERBOSE" -e "INPUT_TOKEN" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_ID_TOKEN_REQUEST_URL" -e "ACTIONS_ID_TOKEN_REQUEST_TOKEN" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/tsinghong1984.github.io/tsinghong1984.github.io":"/github/workspace" ghcr.io/actions/jekyll-build-pages:v1.0.13
+2026-06-16T17:21:10.6775621Z To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+2026-06-16T17:21:10.9713904Z [33m    Liquid Warning: Liquid syntax error (line 92): Unexpected character " in "{{ "{{ content }}" in /github/workspace/_posts/网络技术/2026-06-15-jekyll-config-principle.md[0m
+2026-06-16T17:21:11.0208760Z [33m    Liquid Warning: Liquid syntax error (line 92): Unexpected character " in "{{ "{{ content }}" in /github/workspace/_posts/网络技术/2026-06-15-jekyll-config-principle.md/#excerpt[0m
+2026-06-16T17:21:12.0837536Z   Logging at level: debug
+2026-06-16T17:21:12.0838208Z Configuration file: /github/workspace/./_config.yml
+2026-06-16T17:21:12.0839628Z       GitHub Pages: github-pages v232
+2026-06-16T17:21:12.0840003Z       GitHub Pages: jekyll v3.10.0
+2026-06-16T17:21:12.0840303Z              Theme: jekyll-theme-primer
+2026-06-16T17:21:12.0840686Z       Theme source: /usr/local/bundle/gems/jekyll-theme-primer-0.6.0
+2026-06-16T17:21:12.0841079Z          Requiring: jekyll-github-metadata
+2026-06-16T17:21:12.0841390Z          Requiring: jekyll-seo-tag
+2026-06-16T17:21:12.0841667Z          Requiring: jekyll-coffeescript
+2026-06-16T17:21:12.0841994Z          Requiring: jekyll-commonmark-ghpages
+2026-06-16T17:21:12.0842347Z          Requiring: jekyll-gist
+2026-06-16T17:21:12.0842686Z          Requiring: jekyll-github-metadata
+2026-06-16T17:21:12.0842972Z          Requiring: jekyll-paginate
+2026-06-16T17:21:12.0843244Z          Requiring: jekyll-relative-links
+2026-06-16T17:21:12.0843546Z          Requiring: jekyll-optional-front-matter
+2026-06-16T17:21:12.0844020Z          Requiring: jekyll-readme-index
+2026-06-16T17:21:12.0844950Z          Requiring: jekyll-default-layout
+2026-06-16T17:21:12.0845474Z          Requiring: jekyll-titles-from-headings
+2026-06-16T17:21:12.0845985Z    GitHub Metadata: Initializing...
+2026-06-16T17:21:12.0846740Z             Source: /github/workspace/./
+2026-06-16T17:21:12.0847831Z        Destination: /github/workspace/./_site
+2026-06-16T17:21:12.0848418Z  Incremental build: disabled. Enable with --incremental
+2026-06-16T17:21:12.0849226Z       Generating... 
+2026-06-16T17:21:12.0849993Z            Reading: _posts/网络技术/2026-06-15-git-network-troubleshoot.md
+2026-06-16T17:21:12.0850684Z            Reading: _posts/网络技术/2026-06-15-hello-world.md
+2026-06-16T17:21:12.0851408Z            Reading: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0852152Z            Reading: _posts/网络技术/2026-06-15-trace-analysis.md
+2026-06-16T17:21:12.0853157Z            Reading: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md
+2026-06-16T17:21:12.0854103Z            Reading: _posts/里德堡原子/RAOFDM/2026-06-17-frequency_response_verification.md
+2026-06-16T17:21:12.0855297Z           Skipping: _posts/里德堡原子/RAOFDM/2026-06-17-frequency_response_verification.md has a future date
+2026-06-16T17:21:12.0861141Z         Generating: JekyllOptionalFrontMatter::Generator finished in 0.000113594 seconds.
+2026-06-16T17:21:12.0862184Z         Generating: JekyllReadmeIndex::Generator finished in 9.8345e-05 seconds.
+2026-06-16T17:21:12.0863118Z         Generating: Jekyll::Paginate::Pagination finished in 4.668e-06 seconds.
+2026-06-16T17:21:12.0864011Z         Generating: JekyllRelativeLinks::Generator finished in 7.4399e-05 seconds.
+2026-06-16T17:21:12.0864954Z         Generating: JekyllDefaultLayout::Generator finished in 0.001460056 seconds.
+2026-06-16T17:21:12.0865679Z          Requiring: kramdown-parser-gfm
+2026-06-16T17:21:12.0866717Z         Generating: JekyllTitlesFromHeadings::Generator finished in 0.007878047 seconds.
+2026-06-16T17:21:12.0868135Z          Rendering: _posts/网络技术/2026-06-15-git-network-troubleshoot.md
+2026-06-16T17:21:12.0869352Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-git-network-troubleshoot.md
+2026-06-16T17:21:12.0870490Z   Rendering Markup: _posts/网络技术/2026-06-15-git-network-troubleshoot.md
+2026-06-16T17:21:12.0872540Z   Rendering Layout: _posts/网络技术/2026-06-15-git-network-troubleshoot.md
+2026-06-16T17:21:12.0873354Z      Layout source: site
+2026-06-16T17:21:12.0873964Z          Rendering: _posts/网络技术/2026-06-15-hello-world.md
+2026-06-16T17:21:12.0874584Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-hello-world.md
+2026-06-16T17:21:12.0875161Z   Rendering Markup: _posts/网络技术/2026-06-15-hello-world.md
+2026-06-16T17:21:12.0875602Z   Rendering Layout: _posts/网络技术/2026-06-15-hello-world.md
+2026-06-16T17:21:12.0875922Z      Layout source: site
+2026-06-16T17:21:12.0876541Z          Rendering: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0877233Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0877730Z   Rendering Liquid: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0878494Z   Rendering Markup: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0879279Z   Rendering Layout: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0879819Z      Layout source: site
+2026-06-16T17:21:12.0880330Z          Rendering: _posts/网络技术/2026-06-15-trace-analysis.md
+2026-06-16T17:21:12.0881020Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-trace-analysis.md
+2026-06-16T17:21:12.0881780Z   Rendering Markup: _posts/网络技术/2026-06-15-trace-analysis.md
+2026-06-16T17:21:12.0882525Z   Rendering Layout: _posts/网络技术/2026-06-15-trace-analysis.md
+2026-06-16T17:21:12.0883055Z      Layout source: site
+2026-06-16T17:21:12.0883637Z          Rendering: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md
+2026-06-16T17:21:12.0884438Z   Pre-Render Hooks: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md
+2026-06-16T17:21:12.0885223Z   Rendering Markup: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md
+2026-06-16T17:21:12.0886007Z   Rendering Layout: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md
+2026-06-16T17:21:12.0887214Z      Layout source: site
+2026-06-16T17:21:12.0887620Z          Rendering: blog/tags/index.html
+2026-06-16T17:21:12.0888122Z   Pre-Render Hooks: blog/tags/index.html
+2026-06-16T17:21:12.0888670Z   Rendering Liquid: blog/tags/index.html
+2026-06-16T17:21:12.0889161Z   Rendering Markup: blog/tags/index.html
+2026-06-16T17:21:12.0889829Z   Rendering Layout: blog/tags/index.html
+2026-06-16T17:21:12.0890282Z      Layout source: site
+2026-06-16T17:21:12.0890666Z          Rendering: blog/index.html
+2026-06-16T17:21:12.0891131Z   Pre-Render Hooks: blog/index.html
+2026-06-16T17:21:12.0891559Z   Rendering Liquid: blog/index.html
+2026-06-16T17:21:12.0892277Z          Rendering: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md/#excerpt
+2026-06-16T17:21:12.0893147Z   Pre-Render Hooks: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md/#excerpt
+2026-06-16T17:21:12.0894018Z   Rendering Markup: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md/#excerpt
+2026-06-16T17:21:12.0894858Z          Rendering: _posts/网络技术/2026-06-15-trace-analysis.md/#excerpt
+2026-06-16T17:21:12.0895675Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-trace-analysis.md/#excerpt
+2026-06-16T17:21:12.0896693Z   Rendering Markup: _posts/网络技术/2026-06-15-trace-analysis.md/#excerpt
+2026-06-16T17:21:12.0897582Z          Rendering: _posts/网络技术/2026-06-15-jekyll-config-principle.md/#excerpt
+2026-06-16T17:21:12.0898532Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-jekyll-config-principle.md/#excerpt
+2026-06-16T17:21:12.0899512Z   Rendering Liquid: _posts/网络技术/2026-06-15-jekyll-config-principle.md/#excerpt
+2026-06-16T17:21:12.0900454Z   Rendering Markup: _posts/网络技术/2026-06-15-jekyll-config-principle.md/#excerpt
+2026-06-16T17:21:12.0901306Z          Rendering: _posts/网络技术/2026-06-15-hello-world.md/#excerpt
+2026-06-16T17:21:12.0902101Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-hello-world.md/#excerpt
+2026-06-16T17:21:12.0902891Z   Rendering Markup: _posts/网络技术/2026-06-15-hello-world.md/#excerpt
+2026-06-16T17:21:12.0903782Z          Rendering: _posts/网络技术/2026-06-15-git-network-troubleshoot.md/#excerpt
+2026-06-16T17:21:12.0904779Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-git-network-troubleshoot.md/#excerpt
+2026-06-16T17:21:12.0905736Z   Rendering Markup: _posts/网络技术/2026-06-15-git-network-troubleshoot.md/#excerpt
+2026-06-16T17:21:12.0906601Z   Rendering Markup: blog/index.html
+2026-06-16T17:21:12.0907088Z   Rendering Layout: blog/index.html
+2026-06-16T17:21:12.0907527Z      Layout source: site
+2026-06-16T17:21:12.0907931Z          Rendering: files/index.html
+2026-06-16T17:21:12.0908394Z   Pre-Render Hooks: files/index.html
+2026-06-16T17:21:12.0908830Z   Rendering Markup: files/index.html
+2026-06-16T17:21:12.0909292Z   Rendering Layout: files/index.html
+2026-06-16T17:21:12.0909741Z      Layout source: site
+2026-06-16T17:21:12.0910135Z          Rendering: index.html
+2026-06-16T17:21:12.0910543Z   Pre-Render Hooks: index.html
+2026-06-16T17:21:12.0910970Z   Rendering Markup: index.html
+2026-06-16T17:21:12.0911392Z   Rendering Layout: index.html
+2026-06-16T17:21:12.0911821Z          Rendering: assets/css/style.scss
+2026-06-16T17:21:12.0912304Z   Pre-Render Hooks: assets/css/style.scss
+2026-06-16T17:21:12.0912796Z   Rendering Markup: assets/css/style.scss
+2026-06-16T17:21:12.0913328Z          Rendering: 快捷更新.md
+2026-06-16T17:21:12.0913766Z   Pre-Render Hooks: 快捷更新.md
+2026-06-16T17:21:12.0914231Z   Rendering Markup: 快捷更新.md
+2026-06-16T17:21:12.0914697Z   Rendering Layout: 快捷更新.md
+2026-06-16T17:21:12.0915095Z      Layout source: theme
+2026-06-16T17:21:12.0915566Z            Writing: /github/workspace/_site/blog/tags/index.html
+2026-06-16T17:21:12.0916200Z            Writing: /github/workspace/_site/blog/index.html
+2026-06-16T17:21:12.0916981Z            Writing: /github/workspace/_site/files/index.html
+2026-06-16T17:21:12.0917537Z            Writing: /github/workspace/_site/index.html
+2026-06-16T17:21:12.0918137Z            Writing: /github/workspace/_site/assets/css/style.css
+2026-06-16T17:21:12.0918854Z            Writing: /github/workspace/_site/快捷更新/index.html
+2026-06-16T17:21:12.0919861Z            Writing: /github/workspace/_site/notes/2026/06/15/git-network-troubleshoot/index.html
+2026-06-16T17:21:12.0920810Z            Writing: /github/workspace/_site/notes/2026/06/15/hello-world/index.html
+2026-06-16T17:21:12.0921718Z            Writing: /github/workspace/_site/notes/2026/06/15/jekyll-config-principle/index.html
+2026-06-16T17:21:12.0922808Z            Writing: /github/workspace/_site/notes/2026/06/15/trace-analysis/index.html
+2026-06-16T17:21:12.0923798Z            Writing: /github/workspace/_site/notes/2026/06/15/OFDM-不可行论证/index.html
+2026-06-16T17:21:12.0924464Z                     done in 1.144 seconds.
+2026-06-16T17:21:12.0924974Z  Auto-regeneration: disabled. Use --watch to enable.

@@ -1,0 +1,400 @@
+﻿2026-06-16T17:20:53.1389773Z Current runner version: '2.335.1'
+2026-06-16T17:20:53.1415168Z ##[group]Runner Image Provisioner
+2026-06-16T17:20:53.1416131Z Hosted Compute Agent
+2026-06-16T17:20:53.1417059Z Version: 20260527.539
+2026-06-16T17:20:53.1417851Z Commit: a891dd388383b896fa6ac04a82c0b75cec981078
+2026-06-16T17:20:53.1418594Z Build Date: 2026-05-27T21:39:57Z
+2026-06-16T17:20:53.1419285Z Worker ID: {86b33ad7-8baa-42ca-bc4d-863003685e84}
+2026-06-16T17:20:53.1420068Z Azure Region: northcentralus
+2026-06-16T17:20:53.1420690Z ##[endgroup]
+2026-06-16T17:20:53.1422231Z ##[group]Operating System
+2026-06-16T17:20:53.1422927Z Ubuntu
+2026-06-16T17:20:53.1423448Z 24.04.4
+2026-06-16T17:20:53.1423998Z LTS
+2026-06-16T17:20:53.1424506Z ##[endgroup]
+2026-06-16T17:20:53.1425041Z ##[group]Runner Image
+2026-06-16T17:20:53.1425717Z Image: ubuntu-24.04
+2026-06-16T17:20:53.1426600Z Version: 20260607.184.1
+2026-06-16T17:20:53.1427933Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260607.184/images/ubuntu/Ubuntu2404-Readme.md
+2026-06-16T17:20:53.1429453Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260607.184
+2026-06-16T17:20:53.1430521Z ##[endgroup]
+2026-06-16T17:20:53.1431691Z ##[group]GITHUB_TOKEN Permissions
+2026-06-16T17:20:53.1433721Z Contents: read
+2026-06-16T17:20:53.1434334Z Metadata: read
+2026-06-16T17:20:53.1435393Z Pages: write
+2026-06-16T17:20:53.1435958Z ##[endgroup]
+2026-06-16T17:20:53.1438290Z Secret source: Actions
+2026-06-16T17:20:53.1439361Z Prepare workflow directory
+2026-06-16T17:20:53.1860563Z Prepare all required actions
+2026-06-16T17:20:53.1915608Z Getting action download info
+2026-06-16T17:20:53.6420937Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-06-16T17:20:53.7424306Z Download action repository 'actions/configure-pages@v5' (SHA:983d7736d9b0ae728b81ab479565c72886d7745b)
+2026-06-16T17:20:54.0859548Z Download action repository 'actions/jekyll-build-pages@v1' (SHA:44a6e6beabd48582f863aeeb6cb2151cc1716697)
+2026-06-16T17:20:54.4605025Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+2026-06-16T17:20:54.7518443Z Getting action download info
+2026-06-16T17:20:54.9424888Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-06-16T17:20:55.0888554Z Complete job name: build
+2026-06-16T17:20:55.1412694Z ##[group]Pull down action image 'ghcr.io/actions/jekyll-build-pages:v1.0.13'
+2026-06-16T17:20:55.1674382Z ##[command]/usr/bin/docker pull ghcr.io/actions/jekyll-build-pages:v1.0.13
+2026-06-16T17:20:55.6886756Z v1.0.13: Pulling from actions/jekyll-build-pages
+2026-06-16T17:20:55.6894211Z efc2b5ad9eec: Pulling fs layer
+2026-06-16T17:20:55.6901728Z 165b60d1bb48: Pulling fs layer
+2026-06-16T17:20:55.6902398Z 2a328af1ca3a: Pulling fs layer
+2026-06-16T17:20:55.6902738Z 32b58fa44788: Pulling fs layer
+2026-06-16T17:20:55.6903063Z 590ab93c22d2: Pulling fs layer
+2026-06-16T17:20:55.6903385Z 26ea96c4c14c: Pulling fs layer
+2026-06-16T17:20:55.6903770Z bd7e451dfea1: Pulling fs layer
+2026-06-16T17:20:55.6904081Z c209e9dadc51: Pulling fs layer
+2026-06-16T17:20:55.6904377Z a4925b5c711a: Pulling fs layer
+2026-06-16T17:20:55.6904669Z cd9459784e3c: Pulling fs layer
+2026-06-16T17:20:55.6904947Z 32b58fa44788: Waiting
+2026-06-16T17:20:55.6905206Z 590ab93c22d2: Waiting
+2026-06-16T17:20:55.6905507Z 26ea96c4c14c: Waiting
+2026-06-16T17:20:55.6905775Z bd7e451dfea1: Waiting
+2026-06-16T17:20:55.6906070Z c209e9dadc51: Waiting
+2026-06-16T17:20:55.6906520Z a4925b5c711a: Waiting
+2026-06-16T17:20:55.6906785Z cd9459784e3c: Waiting
+2026-06-16T17:20:55.7957722Z 2a328af1ca3a: Verifying Checksum
+2026-06-16T17:20:55.7958334Z 2a328af1ca3a: Download complete
+2026-06-16T17:20:55.8469004Z 165b60d1bb48: Verifying Checksum
+2026-06-16T17:20:55.8478361Z 165b60d1bb48: Download complete
+2026-06-16T17:20:55.9008424Z efc2b5ad9eec: Verifying Checksum
+2026-06-16T17:20:55.9009041Z efc2b5ad9eec: Download complete
+2026-06-16T17:20:55.9400769Z 590ab93c22d2: Verifying Checksum
+2026-06-16T17:20:55.9404308Z 590ab93c22d2: Download complete
+2026-06-16T17:20:56.0669135Z bd7e451dfea1: Verifying Checksum
+2026-06-16T17:20:56.0670722Z bd7e451dfea1: Download complete
+2026-06-16T17:20:56.1293757Z 32b58fa44788: Verifying Checksum
+2026-06-16T17:20:56.1294366Z 32b58fa44788: Download complete
+2026-06-16T17:20:56.2608588Z a4925b5c711a: Verifying Checksum
+2026-06-16T17:20:56.2610068Z a4925b5c711a: Download complete
+2026-06-16T17:20:56.3538735Z cd9459784e3c: Verifying Checksum
+2026-06-16T17:20:56.3539526Z cd9459784e3c: Download complete
+2026-06-16T17:20:56.4478216Z c209e9dadc51: Verifying Checksum
+2026-06-16T17:20:56.4479244Z c209e9dadc51: Download complete
+2026-06-16T17:20:56.6362835Z 26ea96c4c14c: Download complete
+2026-06-16T17:20:57.3185388Z efc2b5ad9eec: Pull complete
+2026-06-16T17:21:01.3480366Z 165b60d1bb48: Pull complete
+2026-06-16T17:21:01.3644952Z 2a328af1ca3a: Pull complete
+2026-06-16T17:21:02.3042483Z 32b58fa44788: Pull complete
+2026-06-16T17:21:02.3144084Z 590ab93c22d2: Pull complete
+2026-06-16T17:21:06.3094107Z 26ea96c4c14c: Pull complete
+2026-06-16T17:21:06.3513562Z bd7e451dfea1: Pull complete
+2026-06-16T17:21:08.3528931Z c209e9dadc51: Pull complete
+2026-06-16T17:21:08.3764696Z a4925b5c711a: Pull complete
+2026-06-16T17:21:08.3853772Z cd9459784e3c: Pull complete
+2026-06-16T17:21:08.3885589Z Digest: sha256:6791ebfd912185ed59bfb5fb102664fa872496b79f87ff8b9cfba292a7345041
+2026-06-16T17:21:08.3898711Z Status: Downloaded newer image for ghcr.io/actions/jekyll-build-pages:v1.0.13
+2026-06-16T17:21:08.3906081Z ghcr.io/actions/jekyll-build-pages:v1.0.13
+2026-06-16T17:21:08.3927655Z ##[endgroup]
+2026-06-16T17:21:08.4223595Z ##[group]Run actions/checkout@v4
+2026-06-16T17:21:08.4224210Z with:
+2026-06-16T17:21:08.4224496Z   repository: tsinghong1984/tsinghong1984.github.io
+2026-06-16T17:21:08.4227647Z   token: ***
+2026-06-16T17:21:08.4227887Z   ssh-strict: true
+2026-06-16T17:21:08.4228125Z   ssh-user: git
+2026-06-16T17:21:08.4228350Z   persist-credentials: true
+2026-06-16T17:21:08.4228598Z   clean: true
+2026-06-16T17:21:08.4228840Z   sparse-checkout-cone-mode: true
+2026-06-16T17:21:08.4229105Z   fetch-depth: 1
+2026-06-16T17:21:08.4229319Z   fetch-tags: false
+2026-06-16T17:21:08.4229542Z   show-progress: true
+2026-06-16T17:21:08.4229767Z   lfs: false
+2026-06-16T17:21:08.4229982Z   submodules: false
+2026-06-16T17:21:08.4230208Z   set-safe-directory: true
+2026-06-16T17:21:08.4230749Z ##[endgroup]
+2026-06-16T17:21:08.5425184Z Syncing repository: tsinghong1984/tsinghong1984.github.io
+2026-06-16T17:21:08.5427036Z ##[group]Getting Git version info
+2026-06-16T17:21:08.5427661Z Working directory is '/home/runner/work/tsinghong1984.github.io/tsinghong1984.github.io'
+2026-06-16T17:21:08.5428376Z [command]/usr/bin/git version
+2026-06-16T17:21:08.5524687Z git version 2.54.0
+2026-06-16T17:21:08.5551521Z ##[endgroup]
+2026-06-16T17:21:08.5577346Z Temporarily overriding HOME='/home/runner/work/_temp/fca796b8-025e-435e-9db0-b00382aa829c' before making global git config changes
+2026-06-16T17:21:08.5578807Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-16T17:21:08.5583879Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tsinghong1984.github.io/tsinghong1984.github.io
+2026-06-16T17:21:08.5636172Z Deleting the contents of '/home/runner/work/tsinghong1984.github.io/tsinghong1984.github.io'
+2026-06-16T17:21:08.5640160Z ##[group]Initializing the repository
+2026-06-16T17:21:08.5644903Z [command]/usr/bin/git init /home/runner/work/tsinghong1984.github.io/tsinghong1984.github.io
+2026-06-16T17:21:08.5764202Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-06-16T17:21:08.5765263Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-06-16T17:21:08.5766021Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-06-16T17:21:08.5766795Z hint: call:
+2026-06-16T17:21:08.5767018Z hint:
+2026-06-16T17:21:08.5767466Z hint: 	git config --global init.defaultBranch <name>
+2026-06-16T17:21:08.5768104Z hint:
+2026-06-16T17:21:08.5768442Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-06-16T17:21:08.5769003Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-06-16T17:21:08.5769417Z hint:
+2026-06-16T17:21:08.5769637Z hint: 	git branch -m <name>
+2026-06-16T17:21:08.5769926Z hint:
+2026-06-16T17:21:08.5770356Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-06-16T17:21:08.5773700Z Initialized empty Git repository in /home/runner/work/tsinghong1984.github.io/tsinghong1984.github.io/.git/
+2026-06-16T17:21:08.5784063Z [command]/usr/bin/git remote add origin https://github.com/tsinghong1984/tsinghong1984.github.io
+2026-06-16T17:21:08.5824873Z ##[endgroup]
+2026-06-16T17:21:08.5825395Z ##[group]Disabling automatic garbage collection
+2026-06-16T17:21:08.5829626Z [command]/usr/bin/git config --local gc.auto 0
+2026-06-16T17:21:08.5856977Z ##[endgroup]
+2026-06-16T17:21:08.5864068Z ##[group]Setting up auth
+2026-06-16T17:21:08.5864737Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-16T17:21:08.5895780Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-16T17:21:08.6249695Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-16T17:21:08.6279197Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-16T17:21:08.6491612Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-16T17:21:08.6528883Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-16T17:21:08.6744467Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-06-16T17:21:08.6776978Z ##[endgroup]
+2026-06-16T17:21:08.6784623Z ##[group]Fetching the repository
+2026-06-16T17:21:08.6785745Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b900a62575653d17fbf66d38a2ed0b66b3f2004a:refs/remotes/origin/main
+2026-06-16T17:21:09.3963965Z From https://github.com/tsinghong1984/tsinghong1984.github.io
+2026-06-16T17:21:09.3964811Z  * [new ref]         b900a62575653d17fbf66d38a2ed0b66b3f2004a -> origin/main
+2026-06-16T17:21:09.3999255Z ##[endgroup]
+2026-06-16T17:21:09.3999933Z ##[group]Determining the checkout info
+2026-06-16T17:21:09.4002439Z ##[endgroup]
+2026-06-16T17:21:09.4007972Z [command]/usr/bin/git sparse-checkout disable
+2026-06-16T17:21:09.4050976Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-06-16T17:21:09.4080360Z ##[group]Checking out the ref
+2026-06-16T17:21:09.4085157Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-06-16T17:21:09.4364419Z Switched to a new branch 'main'
+2026-06-16T17:21:09.4367265Z branch 'main' set up to track 'origin/main'.
+2026-06-16T17:21:09.4373386Z ##[endgroup]
+2026-06-16T17:21:09.4411990Z [command]/usr/bin/git log -1 --format=%H
+2026-06-16T17:21:09.4433394Z b900a62575653d17fbf66d38a2ed0b66b3f2004a
+2026-06-16T17:21:09.4604867Z ##[group]Run actions/configure-pages@v5
+2026-06-16T17:21:09.4605177Z with:
+2026-06-16T17:21:09.4608094Z   token: ***
+2026-06-16T17:21:09.4608318Z   enablement: false
+2026-06-16T17:21:09.4608539Z ##[endgroup]
+2026-06-16T17:21:09.8240906Z ##[group]Run actions/jekyll-build-pages@v1
+2026-06-16T17:21:09.8241229Z with:
+2026-06-16T17:21:09.8241444Z   source: ./
+2026-06-16T17:21:09.8241651Z   destination: ./_site
+2026-06-16T17:21:09.8241885Z   future: false
+2026-06-16T17:21:09.8242163Z   build_revision: b900a62575653d17fbf66d38a2ed0b66b3f2004a
+2026-06-16T17:21:09.8242490Z   verbose: true
+2026-06-16T17:21:09.8245287Z   token: ***
+2026-06-16T17:21:09.8245490Z env:
+2026-06-16T17:21:09.8245686Z   GITHUB_PAGES: true
+2026-06-16T17:21:09.8245910Z ##[endgroup]
+2026-06-16T17:21:09.8339455Z ##[command]/usr/bin/docker run --name ghcrioactionsjekyllbuildpagesv1013_671d80 --label 309d09 --workdir /github/workspace --rm -e "GITHUB_PAGES" -e "INPUT_SOURCE" -e "INPUT_DESTINATION" -e "INPUT_FUTURE" -e "INPUT_BUILD_REVISION" -e "INPUT_VERBOSE" -e "INPUT_TOKEN" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_ID_TOKEN_REQUEST_URL" -e "ACTIONS_ID_TOKEN_REQUEST_TOKEN" -e "ACTIONS_RESULTS_URL" -e "ACTIONS_ORCHESTRATION_ID" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp":"/github/runner_temp" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/tsinghong1984.github.io/tsinghong1984.github.io":"/github/workspace" ghcr.io/actions/jekyll-build-pages:v1.0.13
+2026-06-16T17:21:10.6775649Z To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+2026-06-16T17:21:10.9713939Z [33m    Liquid Warning: Liquid syntax error (line 92): Unexpected character " in "{{ "{{ content }}" in /github/workspace/_posts/网络技术/2026-06-15-jekyll-config-principle.md[0m
+2026-06-16T17:21:11.0208788Z [33m    Liquid Warning: Liquid syntax error (line 92): Unexpected character " in "{{ "{{ content }}" in /github/workspace/_posts/网络技术/2026-06-15-jekyll-config-principle.md/#excerpt[0m
+2026-06-16T17:21:12.0837578Z   Logging at level: debug
+2026-06-16T17:21:12.0838249Z Configuration file: /github/workspace/./_config.yml
+2026-06-16T17:21:12.0839638Z       GitHub Pages: github-pages v232
+2026-06-16T17:21:12.0840006Z       GitHub Pages: jekyll v3.10.0
+2026-06-16T17:21:12.0840306Z              Theme: jekyll-theme-primer
+2026-06-16T17:21:12.0840689Z       Theme source: /usr/local/bundle/gems/jekyll-theme-primer-0.6.0
+2026-06-16T17:21:12.0841081Z          Requiring: jekyll-github-metadata
+2026-06-16T17:21:12.0841392Z          Requiring: jekyll-seo-tag
+2026-06-16T17:21:12.0841669Z          Requiring: jekyll-coffeescript
+2026-06-16T17:21:12.0841996Z          Requiring: jekyll-commonmark-ghpages
+2026-06-16T17:21:12.0842352Z          Requiring: jekyll-gist
+2026-06-16T17:21:12.0842689Z          Requiring: jekyll-github-metadata
+2026-06-16T17:21:12.0842974Z          Requiring: jekyll-paginate
+2026-06-16T17:21:12.0843246Z          Requiring: jekyll-relative-links
+2026-06-16T17:21:12.0843548Z          Requiring: jekyll-optional-front-matter
+2026-06-16T17:21:12.0844428Z          Requiring: jekyll-readme-index
+2026-06-16T17:21:12.0844956Z          Requiring: jekyll-default-layout
+2026-06-16T17:21:12.0845479Z          Requiring: jekyll-titles-from-headings
+2026-06-16T17:21:12.0845991Z    GitHub Metadata: Initializing...
+2026-06-16T17:21:12.0846748Z             Source: /github/workspace/./
+2026-06-16T17:21:12.0847842Z        Destination: /github/workspace/./_site
+2026-06-16T17:21:12.0848423Z  Incremental build: disabled. Enable with --incremental
+2026-06-16T17:21:12.0849233Z       Generating... 
+2026-06-16T17:21:12.0850000Z            Reading: _posts/网络技术/2026-06-15-git-network-troubleshoot.md
+2026-06-16T17:21:12.0850690Z            Reading: _posts/网络技术/2026-06-15-hello-world.md
+2026-06-16T17:21:12.0851415Z            Reading: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0852158Z            Reading: _posts/网络技术/2026-06-15-trace-analysis.md
+2026-06-16T17:21:12.0853165Z            Reading: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md
+2026-06-16T17:21:12.0854128Z            Reading: _posts/里德堡原子/RAOFDM/2026-06-17-frequency_response_verification.md
+2026-06-16T17:21:12.0855304Z           Skipping: _posts/里德堡原子/RAOFDM/2026-06-17-frequency_response_verification.md has a future date
+2026-06-16T17:21:12.0861155Z         Generating: JekyllOptionalFrontMatter::Generator finished in 0.000113594 seconds.
+2026-06-16T17:21:12.0862189Z         Generating: JekyllReadmeIndex::Generator finished in 9.8345e-05 seconds.
+2026-06-16T17:21:12.0863122Z         Generating: Jekyll::Paginate::Pagination finished in 4.668e-06 seconds.
+2026-06-16T17:21:12.0864015Z         Generating: JekyllRelativeLinks::Generator finished in 7.4399e-05 seconds.
+2026-06-16T17:21:12.0864959Z         Generating: JekyllDefaultLayout::Generator finished in 0.001460056 seconds.
+2026-06-16T17:21:12.0865684Z          Requiring: kramdown-parser-gfm
+2026-06-16T17:21:12.0866723Z         Generating: JekyllTitlesFromHeadings::Generator finished in 0.007878047 seconds.
+2026-06-16T17:21:12.0868159Z          Rendering: _posts/网络技术/2026-06-15-git-network-troubleshoot.md
+2026-06-16T17:21:12.0869377Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-git-network-troubleshoot.md
+2026-06-16T17:21:12.0870496Z   Rendering Markup: _posts/网络技术/2026-06-15-git-network-troubleshoot.md
+2026-06-16T17:21:12.0872555Z   Rendering Layout: _posts/网络技术/2026-06-15-git-network-troubleshoot.md
+2026-06-16T17:21:12.0873362Z      Layout source: site
+2026-06-16T17:21:12.0873973Z          Rendering: _posts/网络技术/2026-06-15-hello-world.md
+2026-06-16T17:21:12.0874591Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-hello-world.md
+2026-06-16T17:21:12.0875165Z   Rendering Markup: _posts/网络技术/2026-06-15-hello-world.md
+2026-06-16T17:21:12.0875604Z   Rendering Layout: _posts/网络技术/2026-06-15-hello-world.md
+2026-06-16T17:21:12.0875924Z      Layout source: site
+2026-06-16T17:21:12.0876548Z          Rendering: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0877236Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0877749Z   Rendering Liquid: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0878500Z   Rendering Markup: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0879283Z   Rendering Layout: _posts/网络技术/2026-06-15-jekyll-config-principle.md
+2026-06-16T17:21:12.0879824Z      Layout source: site
+2026-06-16T17:21:12.0880335Z          Rendering: _posts/网络技术/2026-06-15-trace-analysis.md
+2026-06-16T17:21:12.0881024Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-trace-analysis.md
+2026-06-16T17:21:12.0881786Z   Rendering Markup: _posts/网络技术/2026-06-15-trace-analysis.md
+2026-06-16T17:21:12.0882530Z   Rendering Layout: _posts/网络技术/2026-06-15-trace-analysis.md
+2026-06-16T17:21:12.0883059Z      Layout source: site
+2026-06-16T17:21:12.0883643Z          Rendering: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md
+2026-06-16T17:21:12.0884444Z   Pre-Render Hooks: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md
+2026-06-16T17:21:12.0885227Z   Rendering Markup: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md
+2026-06-16T17:21:12.0886563Z   Rendering Layout: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md
+2026-06-16T17:21:12.0887220Z      Layout source: site
+2026-06-16T17:21:12.0887624Z          Rendering: blog/tags/index.html
+2026-06-16T17:21:12.0888126Z   Pre-Render Hooks: blog/tags/index.html
+2026-06-16T17:21:12.0888674Z   Rendering Liquid: blog/tags/index.html
+2026-06-16T17:21:12.0889165Z   Rendering Markup: blog/tags/index.html
+2026-06-16T17:21:12.0889834Z   Rendering Layout: blog/tags/index.html
+2026-06-16T17:21:12.0890286Z      Layout source: site
+2026-06-16T17:21:12.0890670Z          Rendering: blog/index.html
+2026-06-16T17:21:12.0891135Z   Pre-Render Hooks: blog/index.html
+2026-06-16T17:21:12.0891562Z   Rendering Liquid: blog/index.html
+2026-06-16T17:21:12.0892283Z          Rendering: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md/#excerpt
+2026-06-16T17:21:12.0893159Z   Pre-Render Hooks: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md/#excerpt
+2026-06-16T17:21:12.0894037Z   Rendering Markup: _posts/里德堡原子/RAOFDM/2026-06-15-OFDM-不可行论证.md/#excerpt
+2026-06-16T17:21:12.0894863Z          Rendering: _posts/网络技术/2026-06-15-trace-analysis.md/#excerpt
+2026-06-16T17:21:12.0895679Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-trace-analysis.md/#excerpt
+2026-06-16T17:21:12.0896698Z   Rendering Markup: _posts/网络技术/2026-06-15-trace-analysis.md/#excerpt
+2026-06-16T17:21:12.0897588Z          Rendering: _posts/网络技术/2026-06-15-jekyll-config-principle.md/#excerpt
+2026-06-16T17:21:12.0898537Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-jekyll-config-principle.md/#excerpt
+2026-06-16T17:21:12.0899517Z   Rendering Liquid: _posts/网络技术/2026-06-15-jekyll-config-principle.md/#excerpt
+2026-06-16T17:21:12.0900459Z   Rendering Markup: _posts/网络技术/2026-06-15-jekyll-config-principle.md/#excerpt
+2026-06-16T17:21:12.0901311Z          Rendering: _posts/网络技术/2026-06-15-hello-world.md/#excerpt
+2026-06-16T17:21:12.0902105Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-hello-world.md/#excerpt
+2026-06-16T17:21:12.0902914Z   Rendering Markup: _posts/网络技术/2026-06-15-hello-world.md/#excerpt
+2026-06-16T17:21:12.0903786Z          Rendering: _posts/网络技术/2026-06-15-git-network-troubleshoot.md/#excerpt
+2026-06-16T17:21:12.0904785Z   Pre-Render Hooks: _posts/网络技术/2026-06-15-git-network-troubleshoot.md/#excerpt
+2026-06-16T17:21:12.0905741Z   Rendering Markup: _posts/网络技术/2026-06-15-git-network-troubleshoot.md/#excerpt
+2026-06-16T17:21:12.0906607Z   Rendering Markup: blog/index.html
+2026-06-16T17:21:12.0907092Z   Rendering Layout: blog/index.html
+2026-06-16T17:21:12.0907531Z      Layout source: site
+2026-06-16T17:21:12.0907935Z          Rendering: files/index.html
+2026-06-16T17:21:12.0908397Z   Pre-Render Hooks: files/index.html
+2026-06-16T17:21:12.0908834Z   Rendering Markup: files/index.html
+2026-06-16T17:21:12.0909295Z   Rendering Layout: files/index.html
+2026-06-16T17:21:12.0909745Z      Layout source: site
+2026-06-16T17:21:12.0910139Z          Rendering: index.html
+2026-06-16T17:21:12.0910546Z   Pre-Render Hooks: index.html
+2026-06-16T17:21:12.0910974Z   Rendering Markup: index.html
+2026-06-16T17:21:12.0911405Z   Rendering Layout: index.html
+2026-06-16T17:21:12.0911826Z          Rendering: assets/css/style.scss
+2026-06-16T17:21:12.0912308Z   Pre-Render Hooks: assets/css/style.scss
+2026-06-16T17:21:12.0912800Z   Rendering Markup: assets/css/style.scss
+2026-06-16T17:21:12.0913333Z          Rendering: 快捷更新.md
+2026-06-16T17:21:12.0913769Z   Pre-Render Hooks: 快捷更新.md
+2026-06-16T17:21:12.0914235Z   Rendering Markup: 快捷更新.md
+2026-06-16T17:21:12.0914700Z   Rendering Layout: 快捷更新.md
+2026-06-16T17:21:12.0915099Z      Layout source: theme
+2026-06-16T17:21:12.0915571Z            Writing: /github/workspace/_site/blog/tags/index.html
+2026-06-16T17:21:12.0916205Z            Writing: /github/workspace/_site/blog/index.html
+2026-06-16T17:21:12.0916986Z            Writing: /github/workspace/_site/files/index.html
+2026-06-16T17:21:12.0917542Z            Writing: /github/workspace/_site/index.html
+2026-06-16T17:21:12.0918141Z            Writing: /github/workspace/_site/assets/css/style.css
+2026-06-16T17:21:12.0919055Z            Writing: /github/workspace/_site/快捷更新/index.html
+2026-06-16T17:21:12.0919867Z            Writing: /github/workspace/_site/notes/2026/06/15/git-network-troubleshoot/index.html
+2026-06-16T17:21:12.0920815Z            Writing: /github/workspace/_site/notes/2026/06/15/hello-world/index.html
+2026-06-16T17:21:12.0921723Z            Writing: /github/workspace/_site/notes/2026/06/15/jekyll-config-principle/index.html
+2026-06-16T17:21:12.0922812Z            Writing: /github/workspace/_site/notes/2026/06/15/trace-analysis/index.html
+2026-06-16T17:21:12.0923803Z            Writing: /github/workspace/_site/notes/2026/06/15/OFDM-不可行论证/index.html
+2026-06-16T17:21:12.0924468Z                     done in 1.144 seconds.
+2026-06-16T17:21:12.0924978Z  Auto-regeneration: disabled. Use --watch to enable.
+2026-06-16T17:21:12.1810110Z ##[group]Run actions/upload-pages-artifact@v3
+2026-06-16T17:21:12.1810449Z with:
+2026-06-16T17:21:12.1810657Z   name: github-pages
+2026-06-16T17:21:12.1810885Z   path: _site/
+2026-06-16T17:21:12.1811102Z   retention-days: 1
+2026-06-16T17:21:12.1811314Z env:
+2026-06-16T17:21:12.1811505Z   GITHUB_PAGES: true
+2026-06-16T17:21:12.1811722Z ##[endgroup]
+2026-06-16T17:21:12.1909773Z ##[group]Run echo ::group::Archive artifact
+2026-06-16T17:21:12.1910159Z [36;1mecho ::group::Archive artifact[0m
+2026-06-16T17:21:12.1910450Z [36;1mtar \[0m
+2026-06-16T17:21:12.1910709Z [36;1m  --dereference --hard-dereference \[0m
+2026-06-16T17:21:12.1911055Z [36;1m  --directory "$INPUT_PATH" \[0m
+2026-06-16T17:21:12.1911360Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2026-06-16T17:21:12.1911653Z [36;1m  --exclude=.git \[0m
+2026-06-16T17:21:12.1911906Z [36;1m  --exclude=.github \[0m
+2026-06-16T17:21:12.1912155Z [36;1m  .[0m
+2026-06-16T17:21:12.1912363Z [36;1mecho ::endgroup::[0m
+2026-06-16T17:21:12.2065541Z shell: /usr/bin/sh -e {0}
+2026-06-16T17:21:12.2065812Z env:
+2026-06-16T17:21:12.2066015Z   GITHUB_PAGES: true
+2026-06-16T17:21:12.2066246Z   INPUT_PATH: _site/
+2026-06-16T17:21:12.2066684Z ##[endgroup]
+2026-06-16T17:21:12.2151397Z ##[group]Archive artifact
+2026-06-16T17:21:12.2163706Z ./
+2026-06-16T17:21:12.2164052Z ./notes/
+2026-06-16T17:21:12.2164591Z ./notes/2026/
+2026-06-16T17:21:12.2164948Z ./notes/2026/06/
+2026-06-16T17:21:12.2165291Z ./notes/2026/06/15/
+2026-06-16T17:21:12.2165688Z ./notes/2026/06/15/git-network-troubleshoot/
+2026-06-16T17:21:12.2166257Z ./notes/2026/06/15/git-network-troubleshoot/index.html
+2026-06-16T17:21:12.2166925Z ./notes/2026/06/15/hello-world/
+2026-06-16T17:21:12.2177247Z ./notes/2026/06/15/hello-world/index.html
+2026-06-16T17:21:12.2177959Z ./notes/2026/06/15/OFDM-不可行论证/
+2026-06-16T17:21:12.2178364Z ./notes/2026/06/15/OFDM-不可行论证/index.html
+2026-06-16T17:21:12.2178667Z ./notes/2026/06/15/trace-analysis/
+2026-06-16T17:21:12.2178979Z ./notes/2026/06/15/trace-analysis/index.html
+2026-06-16T17:21:12.2179300Z ./notes/2026/06/15/jekyll-config-principle/
+2026-06-16T17:21:12.2179644Z ./notes/2026/06/15/jekyll-config-principle/index.html
+2026-06-16T17:21:12.2179998Z ./快捷更新/
+2026-06-16T17:21:12.2180213Z ./快捷更新/index.html
+2026-06-16T17:21:12.2180418Z ./assets/
+2026-06-16T17:21:12.2180604Z ./assets/css/
+2026-06-16T17:21:12.2180804Z ./assets/css/style.css
+2026-06-16T17:21:12.2181019Z ./blog/
+2026-06-16T17:21:12.2181199Z ./blog/tags/
+2026-06-16T17:21:12.2181392Z ./blog/tags/index.html
+2026-06-16T17:21:12.2181607Z ./blog/index.html
+2026-06-16T17:21:12.2181804Z ./files/
+2026-06-16T17:21:12.2182035Z ./files/里德堡原子/
+2026-06-16T17:21:12.2203298Z ./files/里德堡原子/presentation611.pdf
+2026-06-16T17:21:12.2204886Z ./files/里德堡原子/presentation326.pdf
+2026-06-16T17:21:12.2223983Z ./files/index.html
+2026-06-16T17:21:12.2224460Z ./快捷更新.md
+2026-06-16T17:21:12.2224723Z ./robots.txt
+2026-06-16T17:21:12.2224949Z ./推送.bat
+2026-06-16T17:21:12.2225141Z ./index.html
+2026-06-16T17:21:12.2225366Z ./push.ps1
+2026-06-16T17:21:12.2227964Z ##[endgroup]
+2026-06-16T17:21:12.2300018Z ##[group]Run actions/upload-artifact@v4
+2026-06-16T17:21:12.2300304Z with:
+2026-06-16T17:21:12.2300505Z   name: github-pages
+2026-06-16T17:21:12.2300770Z   path: /home/runner/work/_temp/artifact.tar
+2026-06-16T17:21:12.2301071Z   retention-days: 1
+2026-06-16T17:21:12.2301308Z   if-no-files-found: error
+2026-06-16T17:21:12.2301558Z   compression-level: 6
+2026-06-16T17:21:12.2301788Z   overwrite: false
+2026-06-16T17:21:12.2302012Z   include-hidden-files: false
+2026-06-16T17:21:12.2302254Z env:
+2026-06-16T17:21:12.2302449Z   GITHUB_PAGES: true
+2026-06-16T17:21:12.2302820Z ##[endgroup]
+2026-06-16T17:21:12.4497901Z With the provided path, there will be 1 file uploaded
+2026-06-16T17:21:12.4504003Z Artifact name is valid!
+2026-06-16T17:21:12.4504842Z Root directory input is valid!
+2026-06-16T17:21:12.7529105Z Beginning upload of artifact content to blob storage
+2026-06-16T17:21:13.4288250Z Uploaded bytes 6900892
+2026-06-16T17:21:13.4664495Z Finished uploading artifact content to blob storage!
+2026-06-16T17:21:13.4668313Z SHA256 digest of uploaded artifact zip is 7dd8eb44172a28e4c04617fd715eeba913fcc14fe6e05ff7cb446bf22b2952b0
+2026-06-16T17:21:13.4669739Z Finalizing artifact upload
+2026-06-16T17:21:13.6591964Z Artifact github-pages.zip successfully finalized. Artifact ID 7674523920
+2026-06-16T17:21:13.6593220Z Artifact github-pages has been successfully uploaded! Final size is 6900892 bytes. Artifact ID is 7674523920
+2026-06-16T17:21:13.6600751Z Artifact download URL: https://github.com/tsinghong1984/tsinghong1984.github.io/actions/runs/27635543688/artifacts/7674523920
+2026-06-16T17:21:13.6804404Z Post job cleanup.
+2026-06-16T17:21:13.7775104Z [command]/usr/bin/git version
+2026-06-16T17:21:13.7810127Z git version 2.54.0
+2026-06-16T17:21:13.7853806Z Temporarily overriding HOME='/home/runner/work/_temp/4350a31f-5b12-4ec1-b230-d65b3e3809e2' before making global git config changes
+2026-06-16T17:21:13.7855201Z Adding repository directory to the temporary git global config as a safe directory
+2026-06-16T17:21:13.7867217Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tsinghong1984.github.io/tsinghong1984.github.io
+2026-06-16T17:21:13.7899407Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-06-16T17:21:13.7930582Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-06-16T17:21:13.8143598Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-06-16T17:21:13.8165521Z http.https://github.com/.extraheader
+2026-06-16T17:21:13.8178421Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-06-16T17:21:13.8207449Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-06-16T17:21:13.8416094Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-06-16T17:21:13.8445503Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-06-16T17:21:13.8763470Z Cleaning up orphan processes
+2026-06-16T17:21:13.9115120Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/configure-pages@v5, actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 16th, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

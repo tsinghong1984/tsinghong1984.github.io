@@ -1,0 +1,82 @@
+﻿2026-06-16T17:21:12.1810096Z ##[group]Run actions/upload-pages-artifact@v3
+2026-06-16T17:21:12.1810447Z with:
+2026-06-16T17:21:12.1810655Z   name: github-pages
+2026-06-16T17:21:12.1810883Z   path: _site/
+2026-06-16T17:21:12.1811100Z   retention-days: 1
+2026-06-16T17:21:12.1811312Z env:
+2026-06-16T17:21:12.1811503Z   GITHUB_PAGES: true
+2026-06-16T17:21:12.1811721Z ##[endgroup]
+2026-06-16T17:21:12.1909761Z ##[group]Run echo ::group::Archive artifact
+2026-06-16T17:21:12.1910156Z [36;1mecho ::group::Archive artifact[0m
+2026-06-16T17:21:12.1910447Z [36;1mtar \[0m
+2026-06-16T17:21:12.1910706Z [36;1m  --dereference --hard-dereference \[0m
+2026-06-16T17:21:12.1911053Z [36;1m  --directory "$INPUT_PATH" \[0m
+2026-06-16T17:21:12.1911357Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2026-06-16T17:21:12.1911651Z [36;1m  --exclude=.git \[0m
+2026-06-16T17:21:12.1911904Z [36;1m  --exclude=.github \[0m
+2026-06-16T17:21:12.1912153Z [36;1m  .[0m
+2026-06-16T17:21:12.1912361Z [36;1mecho ::endgroup::[0m
+2026-06-16T17:21:12.2065500Z shell: /usr/bin/sh -e {0}
+2026-06-16T17:21:12.2065809Z env:
+2026-06-16T17:21:12.2066013Z   GITHUB_PAGES: true
+2026-06-16T17:21:12.2066244Z   INPUT_PATH: _site/
+2026-06-16T17:21:12.2066681Z ##[endgroup]
+2026-06-16T17:21:12.2151384Z ##[group]Archive artifact
+2026-06-16T17:21:12.2163691Z ./
+2026-06-16T17:21:12.2164045Z ./notes/
+2026-06-16T17:21:12.2164583Z ./notes/2026/
+2026-06-16T17:21:12.2164945Z ./notes/2026/06/
+2026-06-16T17:21:12.2165287Z ./notes/2026/06/15/
+2026-06-16T17:21:12.2165684Z ./notes/2026/06/15/git-network-troubleshoot/
+2026-06-16T17:21:12.2166254Z ./notes/2026/06/15/git-network-troubleshoot/index.html
+2026-06-16T17:21:12.2166921Z ./notes/2026/06/15/hello-world/
+2026-06-16T17:21:12.2177235Z ./notes/2026/06/15/hello-world/index.html
+2026-06-16T17:21:12.2177953Z ./notes/2026/06/15/OFDM-不可行论证/
+2026-06-16T17:21:12.2178360Z ./notes/2026/06/15/OFDM-不可行论证/index.html
+2026-06-16T17:21:12.2178664Z ./notes/2026/06/15/trace-analysis/
+2026-06-16T17:21:12.2178963Z ./notes/2026/06/15/trace-analysis/index.html
+2026-06-16T17:21:12.2179298Z ./notes/2026/06/15/jekyll-config-principle/
+2026-06-16T17:21:12.2179641Z ./notes/2026/06/15/jekyll-config-principle/index.html
+2026-06-16T17:21:12.2179995Z ./快捷更新/
+2026-06-16T17:21:12.2180210Z ./快捷更新/index.html
+2026-06-16T17:21:12.2180416Z ./assets/
+2026-06-16T17:21:12.2180602Z ./assets/css/
+2026-06-16T17:21:12.2180802Z ./assets/css/style.css
+2026-06-16T17:21:12.2181017Z ./blog/
+2026-06-16T17:21:12.2181197Z ./blog/tags/
+2026-06-16T17:21:12.2181390Z ./blog/tags/index.html
+2026-06-16T17:21:12.2181605Z ./blog/index.html
+2026-06-16T17:21:12.2181802Z ./files/
+2026-06-16T17:21:12.2182032Z ./files/里德堡原子/
+2026-06-16T17:21:12.2203285Z ./files/里德堡原子/presentation611.pdf
+2026-06-16T17:21:12.2204879Z ./files/里德堡原子/presentation326.pdf
+2026-06-16T17:21:12.2223974Z ./files/index.html
+2026-06-16T17:21:12.2224453Z ./快捷更新.md
+2026-06-16T17:21:12.2224720Z ./robots.txt
+2026-06-16T17:21:12.2224946Z ./推送.bat
+2026-06-16T17:21:12.2225139Z ./index.html
+2026-06-16T17:21:12.2225346Z ./push.ps1
+2026-06-16T17:21:12.2227957Z ##[endgroup]
+2026-06-16T17:21:12.2300011Z ##[group]Run actions/upload-artifact@v4
+2026-06-16T17:21:12.2300301Z with:
+2026-06-16T17:21:12.2300502Z   name: github-pages
+2026-06-16T17:21:12.2300767Z   path: /home/runner/work/_temp/artifact.tar
+2026-06-16T17:21:12.2301069Z   retention-days: 1
+2026-06-16T17:21:12.2301300Z   if-no-files-found: error
+2026-06-16T17:21:12.2301556Z   compression-level: 6
+2026-06-16T17:21:12.2301786Z   overwrite: false
+2026-06-16T17:21:12.2302010Z   include-hidden-files: false
+2026-06-16T17:21:12.2302252Z env:
+2026-06-16T17:21:12.2302447Z   GITHUB_PAGES: true
+2026-06-16T17:21:12.2302817Z ##[endgroup]
+2026-06-16T17:21:12.4497874Z With the provided path, there will be 1 file uploaded
+2026-06-16T17:21:12.4503990Z Artifact name is valid!
+2026-06-16T17:21:12.4504833Z Root directory input is valid!
+2026-06-16T17:21:12.7529081Z Beginning upload of artifact content to blob storage
+2026-06-16T17:21:13.4288216Z Uploaded bytes 6900892
+2026-06-16T17:21:13.4664058Z Finished uploading artifact content to blob storage!
+2026-06-16T17:21:13.4668299Z SHA256 digest of uploaded artifact zip is 7dd8eb44172a28e4c04617fd715eeba913fcc14fe6e05ff7cb446bf22b2952b0
+2026-06-16T17:21:13.4669726Z Finalizing artifact upload
+2026-06-16T17:21:13.6591948Z Artifact github-pages.zip successfully finalized. Artifact ID 7674523920
+2026-06-16T17:21:13.6593209Z Artifact github-pages has been successfully uploaded! Final size is 6900892 bytes. Artifact ID is 7674523920
+2026-06-16T17:21:13.6600738Z Artifact download URL: https://github.com/tsinghong1984/tsinghong1984.github.io/actions/runs/27635543688/artifacts/7674523920

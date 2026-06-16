@@ -5,6 +5,7 @@ url: "https://tsinghong1984.github.io"
 markdown: kramdown
 permalink: /notes/:year/:month/:day/:title/
 excerpt_separator: "<!--more-->"
+future: true
 
 # kramdown 数学公式渲染，配合 MathJax 3
 kramdown:
